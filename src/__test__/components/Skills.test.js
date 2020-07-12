@@ -2,8 +2,27 @@ import React from 'react';
 import { mount } from 'enzyme';
 import Skills from '../../components/Skills';
 
+const skillsData = [
+  {
+    'name': 'HTML5',
+    'percentage': '75%',
+  },
+  {
+    'name': 'CSS',
+    'percentage': '25%',
+  },
+  {
+    'name': 'JavaScript',
+    'percentage': '55%',
+  },
+  {
+    'name': 'React',
+    'percentage': '90%',
+  },
+];
+
 describe('<Skills />', () => {
-  const skills = mount(<Skills />);
+  const skills = mount(<Skills skills={skillsData} />);
 
   test('Skills render', () => {
     expect(skills.length).toEqual(1);

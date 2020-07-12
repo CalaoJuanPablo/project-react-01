@@ -1,0 +1,26 @@
+@import '../mixins/grid.scss';
+@import '../mixins/container.scss';
+@import '../mixins/breakpoints.scss';
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 40px;
+  @include container;
+  @include display-grid;
+  @include grid-template-columns(1fr);
+  @include media(tablet) {
+    @include grid-template-columns(1fr 1fr);
+  }
+}

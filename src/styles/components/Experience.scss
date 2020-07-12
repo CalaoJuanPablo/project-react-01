@@ -1,0 +1,23 @@
+@import '../mixins/grid.scss';
+@import '../mixins/container.scss';
+@import '../mixins/breakpoints.scss';
+
+.Experience {
+    @include media(tablet) {
+        @include grid-column(1, 3);
+    }
+    &-title {
+        margin-bottom: 12px;
+    }
+    &-grid {
+        gap: 20px;
+        @include display-grid;
+        @include media(tablet) {
+            @include grid-template-columns(1fr 1fr);
+        }
+    }
+    &-dates {
+        color: #666666;
+        margin-bottom: 8px;
+    }
+}

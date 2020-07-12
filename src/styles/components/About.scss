@@ -1,0 +1,19 @@
+@import '../mixins/grid.scss';
+@import '../mixins/breakpoints.scss';
+
+.About {
+    &-title {
+        margin-bottom: 12px;
+    }
+    &-contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        list-style: none;
+        padding: 0;
+        @include media(tablet) {
+            flex-direction: row;
+        }
+    }
+}

@@ -2,8 +2,23 @@ import React from 'react';
 import { mount } from 'enzyme';
 import Languages from '../../components/Languages';
 
+const languagesData = [
+  {
+    name: 'Spanish',
+    percentage: '90%',
+  },
+  {
+    name: 'English',
+    percentage: '50%',
+  },
+  {
+    name: 'English',
+    percentage: '50%',
+  },
+];
+
 describe('<Languages />', () => {
-  const languages = mount(<Languages />);
+  const languages = mount(<Languages languages={languagesData} />);
 
   test('Languages render', () => {
     expect(languages.length).toEqual(1);
